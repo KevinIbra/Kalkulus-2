@@ -1,0 +1,579 @@
+body {
+    font-family: "poppins", sans-serif;
+    font-size: 15px;
+
+    color: #333; /* Warna teks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Konten dimulai dari atas */
+    min-height: 10vh;
+    padding-left: 10;
+    padding: 0;
+    margin: 0;
+    background-image: url('bgg.png'); 
+        background-size: cover;
+        background-position: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.header-content h1{
+    font-family: "Poppins",sans-serif;
+    font-weight:600;
+    font-size: 20px;
+    margin-left: 15px;
+    color: #d4c083;
+   
+}
+
+.navbar-content {
+    display: block;
+    align-items: right;
+}
+
+nav {
+    background-color: #32588b; /* Warna latar belakang ungu muda untuk navbar */
+    position: fixed;
+    display: ruby;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Mengurangi tinggi navbar menjadi 60px */
+    padding: 0 20px; /* Mengurangi padding kanan dan kiri */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10 ; /* Efek bayangan untuk navbar */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: ruby; /* Tampilkan item dalam satu baris */
+    margin-right: 15px; /* Jarak antar item */
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 14px; /* Mengurangi ukuran teks */
+    padding: 8px 12px ;
+    margin-left: 0.5cm; /* Mengurangi padding atas dan bawah, serta kiri dan kanan */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4977b4;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*home*/  
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+
+}
+/* tulisan animasi */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+.typing-animation {
+    overflow: hidden; /* Membuat teks tersembunyi saat ketik */
+    border-right: .12em solid orange;  /* Garis penghubung teks */
+    white-space: nowrap; /* Mencegah teks wrapping */
+    letter-spacing: .12em; /* Spasi antar huruf */
+    animation: typing 10s steps(30, end) infinite alternate; /* Animasi ketik dengan durasi 3 detik */
+  }
+/* tulisan animasi */
+
+
+.home-section img {
+    width: 550px;
+    height: auto;
+    margin-top: 2cm;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.home-section-content {
+    flex: 1;
+}
+.kolom {
+    flex: 1;
+        padding: 20px;
+        background-color: #2f4766;
+        background-origin:content-box;
+        color: #ccc;
+        border-radius: 10px;
+            margin-top: -8px;
+            width: 17cm;
+            height: 11.7cm;
+            border: 2px ; /* Atur border awal */
+            animation: borderMove 5s ease-in-out ;
+}
+
+@keyframes borderMove {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+.home-section h2 {
+    color: #d4c083;
+    font-size: 40px;
+    margin-top: -0.4cm;
+}
+
+.home-section h3 {
+    color: #7da5da;
+    font-size: 30px;
+    margin-top: -1.1cm;
+}
+
+
+.home-section p {
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: -0.9cm;
+}
+
+.home-section a {
+    padding: 10px 12px;
+    font-size: 18px;
+    background-color: #ffb74d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.home-section a:hover {
+    background-color: #ffa726;
+}
+
+/*kalkulator*/
+.matrix-order{
+    margin-top: -0.4cm;
+}
+.matrix-order label {
+    font-size: 19px;
+    padding-top: -3cm;
+}
+.matrix-order select {
+    padding: 3px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffb74d;
+    color: white;
+    border-radius: 5px;
+}
+
+.matrix-order select:hover {
+    background-color: #ffa217;
+}
+
+
+.content {
+    text-align: center;
+    width: 50%; /* Mengambil lebar maksimal dari layar */
+    padding-top: 30px; /* Tambahkan margin atas setara dengan tinggi navbar */
+    box-sizing: border-box;
+     /* Memastikan padding tidak menambahkan lebar */
+     margin-top: 5.5cm;
+     scroll-margin-top:  1.8cm;
+     margin-bottom: 4cm;
+     background-color: #2f4766;
+     background-origin:content-box;
+    border-radius: 20px;
+    height: 15cm;
+    color: white;
+}
+
+
+
+/* Form styles */
+
+
+.row {
+    margin-bottom: 10px;
+    text-align: center;
+
+
+
+}
+
+input[type="number"] {
+    text-align: center;
+    font-family: "poppins",sans-serif;
+    font-size: 20px;
+    padding: 10px ;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #b39ddb; /* Warna border ungu muda */
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 12px;
+    font-size: 15px;
+    font-family: "poppins",sans-serif;
+    text-align: center;
+    background-color: #ffb74d; /* Warna latar belakang kuning muda */
+    color: #fff; /* Warna teks putih */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 14px;
+}
+
+
+button:hover {
+    background-color: #ffa726; /* Warna kuning yang lebih gelap saat hover */
+}
+
+#result {
+    margin-top: 0.1cm;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 18px;
+    top: 10cm;
+   
+}
+
+.steps{
+    margin-top: -1.2cm;
+    font-size: 18px;
+    
+
+}
+.steps1{
+    margin-top: -0.9cm;
+    font-size: 18px;
+}
+
+/*materi*/
+.materi{
+    flex: 1 ;
+    background-color: #2f4766;
+    color: white;
+    background-origin:content-box;
+    border-radius: 30px;
+        scroll-margin-top: 1.8cm;
+        margin-top: 1.5cm;
+        margin-bottom: 2cm;
+}
+.materi h5{
+    font-size: 15px;
+    padding-left: 1cm;
+    margin-top: -0.5cm;
+}
+.materi img{
+    width: 300px;
+    border-radius: 4%;
+    padding-left: 1cm;
+}
+.materi strong{
+    font-size: 20px;
+    padding-left: 1cm;
+    margin-top: 1cm;
+}
+
+.materi h2{
+    margin-top: 1.5cm;
+    font-size: 25px;
+    padding-left: 1cm;
+}
+.materi p {
+    font-size: 15px;
+    padding-left: 1cm;
+    margin-top: 0.5cm;
+
+}
+.materi p {
+    font-size: 15px;
+    padding-left: 1cm;
+    margin-top: 0.5cm;
+
+}
+/* kontak */
+.Kontak{
+
+    min-height: 100vh;
+    padding-top: 1.5cm;
+}
+    
+    .team-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    
+    
+        
+    }
+    
+    .profile {
+        flex: 1 1 200px; /* Setiap profil akan memiliki minimal lebar 200px dan tumbuh sesuai dengan ruang yang tersedia */
+        margin: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Penambahan shadow untuk estetika */
+        padding: 20px;
+        background-color: rgb(255, 255, 255); /* Warna latar belakang untuk setiap profil */
+        border-radius: 20px;
+        overflow: hidden;
+        transition: 0.3s ease;
+        
+    }
+    
+    
+    .profile:hover {
+        transform: scale(1.1);
+        border-color: #ccc;
+  box-shadow: 0 0 15px #ccc; /* Efek 3D */
+    }
+    
+   
+     /* animasi teks-1*/
+    .profile h3 {
+        color: #525252; /* Warna teks untuk judul */
+        animation: teks-1 3s forwards;
+        opacity: 0;
+    }
+   
+@keyframes teks-1 {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  
+.hidden {
+    visibility: hidden;
+  }
+    
+     /* animasi teks-1 */
+    .profile p {
+        color: #666; /* Warna teks untuk paragraf */
+        animation: teks-2 3s forwards;
+        opacity: 0;
+    }
+    
+@keyframes teks-2 {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+    
+    
+    #contact{
+        color: #000000;
+        text-align: center;
+       
+    }
+    .team-grid p{
+        font-size: 13px;
+    }
+    .team-grid .profile  h3{
+        color: #1c1c1c;
+        font-size: 15px;
+    }
+    .foto-andi img{
+        border-radius: 20px;
+        width: 100%;
+        height: 50%;
+    }
+    .foto-arya img{
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    .foto-kevin img{
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    .foto-rizki img{
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    .foto-shelva img{
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    
+    
+    
+    
+    
+    /* sub */
+    
+    .submarine {
+        width: 100px;
+        float: left;
+    
+        animation: sub 5s infinite alternate;
+    
+    }
+  
+    
+    /* line */
+    hr{
+        width: 300px;
+        height: 5px;
+        background-color: #000000;
+        display: inline-block;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    
+    }
+    
+    
+/* feedback feedback */
+#feedback {
+    padding-bottom: 3cm; /* Tambahkan padding untuk memberi ruang */
+    margin-top: 1cm; /* Tambahkan margin atas setara dengan tinggi navbar */
+}
+.content-feedback h2{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 2cm;
+}
+#formfeedback {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto; /* Agar formulir berada di tengah */
+}
+
+#formfeedback .row {
+    margin-bottom: 15px;
+}
+
+#formfeedback label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#formfeedback input[type="text"],
+#formfeedback input[type="email"],
+#formfeedback textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid #32588b;
+    border-radius: 5px;
+}
+
+#formfeedback input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    font-family: "poppins",sans-serif;
+    background-color: #ffb039;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formfeedback input[type="button"]:hover {
+    background-color: #ffa726;
+}
+
+#statusPesan {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+/* Footer styling */
+footer {
+    background-color: #333; /* Warna latar belakang gelap untuk kontras */
+    color: white; /* Warna teks putih untuk keterbacaan */
+    text-align: center; /* Pusatkan teks */
+    padding: 20px  0; 
+    font-size: 16px; /* Ukuran teks yang sesuai */
+    bottom: 0; /* Atur footer ke bagian bawah */
+    width: 100%; /* Lebar penuh */
+}
+
+
+.footer-content p {
+    margin: 5px 0; /* Reduce margin for a compact look */
+}
+
+.footer-links {
+    margin-top: 10px; /* Space above links */
+}
+
+.footer-links a {
+    color: #ccc; /* Light gray for links for subtle contrast */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Horizontal spacing */
+}
+
+.footer-links a:hover {
+    color: #fff; /* White color on hover for visibility */
+}
+
+
+
+/* Content styles */
+
+/* Styles the scrollbar itself */
+::-webkit-scrollbar {
+    width: 3px; /* Adjusts the width of the vertical scrollbar */
+    height: 8px; /* Adjusts the height of the horizontal scrollbar */
+}
+
+/* Styles the track (part the thumb slides within) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background on the track */
+}
+
+/* Styles the thumb (the part that's draggable) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Darker grey for the thumb */
+    border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+
+

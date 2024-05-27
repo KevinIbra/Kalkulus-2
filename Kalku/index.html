@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Determinant Calculator</title>
+    <link rel="icon" href="Logo MT 4 Crop.PNG" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;800&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/817f72ffce.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+   
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+</head>
+<body>
+   
+    <nav>
+        <div class="header-content">
+            <h1>MathTricks</h1> <!-- Konten header -->
+        </div>
+        <ul>
+            <li><a href="#home"> <i class="fa-solid fa-house"></i>   Beranda</a></li>
+            <li><a href="#calculator"><i class="fa-solid fa-calculator"></i>   Kalkulator</a></li>            
+            <li><a href="#materi" ><i class="fa-solid fa-book"></i>   Materi Determinan</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-user"></i>   Member</a></li>
+            <li><a href="#feedback"><i class="fa-solid fa-phone"></i>   Feedback</a></li>
+
+        </ul>
+    </nav>
+    
+
+   
+        <div class="home-section"  id="home">
+
+            <img src="Calculator-pana.png">
+<div class="kolom" > 
+    <h2>Selamat datang di <div class="typing-animation">MathTricks</div> </h2>
+    <h3>Kalkulator Matrix Determinan </h3>
+
+    <p>
+        MathTricks ini merupakan platform yang menyediakan kalkulator untuk menghitung determinan matriks berordo 3x3.
+    
+    
+        Selain itu, pengguna juga dapat mempelajari materi tentang determinan matriks, termasuk rumus dan contoh perhitungan untuk matriks ordo 3x3.
+    
+    
+        MathTricks ini didesain untuk membantu pengguna memahami konsep dan penerapan determinan matriks dalam matematika.
+    
+    
+        Dengan menggunakan kalkulator yang disediakan, pengguna dapat dengan mudah menghitung determinan matriks 3x3 untuk keperluan pembelajaran atau penyelesaian masalah matematika praktis.
+    </p>
+    <a href="#calculator" id="startButton">Ayo Mulai</a></p>
+</div>
+        </div>
+
+    
+
+        <div class="content" id="calculator">
+        
+            <h2>Kalkulator Determinan Matriks</h2>
+            
+            <form id="matrix-form">
+                <div class="matrix-order">
+                    <label for="matrix-order">Pilih Ordo Matriks:</label>
+                    <select id="matrix-order" onchange="changeMatrixOrder()">
+                        <option value="2">Ordo 2x2</option>
+                        <option value="3">Ordo 3x3</option>
+                    </select>
+                </div>
+                <div class="matrix-input" id="matrix-input-2">
+                    <div class="row">
+                        <input type="number" id="a" required>
+                        <input type="number" id="b" required>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="c" required>
+                        <input type="number" id="d" required>
+                    </div>
+                </div>
+                <div class="matrix-input" id="matrix-input-3" style="display: none;">
+                    <div class="row">
+                        <input type="number" id="a1" required>
+                        <input type="number" id="a2" required>
+                        <input type="number" id="a3" required>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="b1" required>
+                        <input type="number" id="b2" required>
+                        <input type="number" id="b3" required>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="c1" required>
+                        <input type="number" id="c2" required>
+                        <input type="number" id="c3" required>
+                    </div>
+                </div>
+          
+                <button class="but" type="button" onclick="calculateDeterminant()">Hitung</button>
+                <button class="ton" type="button" onclick="clearMatrix()">Clear</button>
+                
+            </form>
+            <div class="result-content" id="result"></div>
+            <div class="steps" id="steps"></div>
+            <div class="steps1" id="steps1"></div>
+            <!-- Tombol "Steps" untuk gulir ke langkah-langkah -->
+        </div>
+    
+        <div class="materi" id="materi" >
+    
+            <h2>Determinan Matriks</h2>
+            <form id="form-materi">
+                <h5>
+                    Determinan matriks adalah hasil kali elemen-elemen diagonal utama suatu matriks persegi dengan hasil kali
+                    elemen-elemen pada diagonal lainnya. Determinan umumnya ditulis dengan notasi det (A) atau |A|. Determinan
+                    matriks dapat dibedakan atas 2 jenis, antara lain:
+                </h5>
+                <ol>
+                    <li>
+                       
+                        <strong>Determinan Matriks Ordo 2x2</strong>
+                        <p>
+                            Ordo atau ukuran matriks adalah jumlah baris dan kolom yang dimiliki matriks. Contohnya matriks A
+                            mxn, artinya matriks A berordo m x n dengan jumlah baris m buah, dan jumlah kolom n buah. Adapun
+                            rumus determinan matriks ordo 2x2 adalah:
+        
+                            Misalkan matriks A memiliki baris 1 -> (a, b), dan baris 2 -> (c, d), maka det (A) = ad Ã¢â‚¬â€œ bc
+        
+                            Contoh Soal: Tentukanlah determinan dari matriks A dengan baris 1 -> (4, -8) dan baris 2 -> (5, 1)
+                            Jawab: det A = ( 4. 1 ) Ã¢â‚¬â€œ ((-8). 5) = 4 Ã¢â‚¬â€œ (-40) = 44 </p>
+                        <img src="png.png">
+        
+                    <li>
+                
+                        <strong>Determinan Matriks Ordo 3x3</strong>
+                        <p>
+                            Untuk menentukan determinan matriks ordo 3x3 digunakan aturan Sarrus sebagai berikut, Misalkan
+                            matriks A memiliki baris 1 -> (a11, a12, a13), baris 2 -> (a21, a22, a23), dan baris 3 (a31, a32,
+                            a33). Maka det (A) = hasil pengurangan dari penjumlahan untuk diagonal kanan dan diagonal kiri.
+                        </p>
+                        <p>Contoh Soal: Tentukanlah determinan dari matriks A dengan baris 1 -> (3, 4, -1), baris 2 -> (4, 6,
+                            2), dan baris 3 -> (8, -2, 3) </p>
+                        <p>Jawab: |A| = (3.6.3) + (4.2.8) + ((-1).4.(-2)) Ã¢â‚¬â€œ (8.6.(-1)) Ã¢â‚¬â€œ ((-2).2.3) Ã¢â‚¬â€œ (3.4.4). |A| = 54 + 64 + 8
+                            Ã¢â‚¬â€œ (-48) Ã¢â‚¬â€œ (-12) Ã¢â‚¬â€œ
+                            48 = 138</p>
+                        <img src="646f60ae6805c.png">
+                    </li>
+                  
+                </ol>
+            </form>
+        </div>
+   
+
+    
+
+    <div class="Kontak" id="contact" >
+        <h2>Member Of Group</h2>
+       <hr>
+        <div class="team-grid">
+            <div class="profile">
+                <h3>Andi Rafiyan </h3>
+                <div class="foto-andi"><img src="andi.jpg" alt=""></div>
+                <p>Mahasiswa Informatika <br> Universitas Siliwangi</p>
+                <a href="https://www.instagram.com/fiiyaaan_"></i><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"> <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="profile" data-aos="fade-down" data-aos="fade-down" data-aos-duration="2000" 
+            data-aos-delay="1000">
+                <h3>Kevin Ibrahimovic  </h3>
+                <div class="foto-kevin"><img src="WIN_20230922_13_43_20_Pro.jpg" alt=""></div>
+                <p>Mahasiswa Informatika <br>Universitas Siliwangi</p>
+                <a href="https://www.instagram.com/kvin.ibra?igsh=MjVlajY1OHVnNjBo"></i><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:237006073@student.unsil.ac.id"> <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="profile" data-aos="fade-down" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1000">
+                <h3>Shelva Nur Fatimah </h3>
+                <div class="foto-shelva"><img src="CECEP.jpg" alt=""></div>
+                <p>Mahasiswa Informatika <br>Universitas Siliwangi</p>
+                <a href="https://www.instagram.com/_shlvaa7?igsh=MWZ6cnFlcjNvdmhiaA=="></i><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:237006069@student.unsil.ac.id"> <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="profile" data-aos="fade-down" data-aos="fade-down" data-aos-duration="2500" 
+            data-aos-delay="1000">
+                <h3>Muhamad Rizki                </h3>
+                <div class="foto-rizki"><img src="rizki.jpg" alt=""></div>
+                <p>Mahasiswa Informatika <br>Universitas Siliwangi</p>
+                <a href="https://www.instagram.com/rizkiist?igsh=MXhpZnlzbGJndjhmeQ=="></i><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:237006085@student.unsil.ac.id"> <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="profile" data-aos="fade-down" data-aos="fade-down" data-aos-duration="3000" 
+            data-aos-delay="1000">
+                <h3>Arya Achmad Caesar                </h3>
+                <div class="foto-arya"><img src="arya.jpg" alt=""></div>
+                <p>Mahasiswa Informatika <br>Universitas Siliwangi</p>
+                <a href="https://www.instagram.com/aryaacaesar?igsh=MThkcWVvYXVzc3U3ZA%3D%3D&utm_source=qr"></i><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:237006093@student.unsil.ac.id"> <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+            <div class="ikon">
+                
+            </div>
+        </div>
+        </div>
+
+    <div class="content-feedback" id="feedback">
+        <h2>Kontak Kami</h2>
+        <form id="formfeedback">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="nama" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="pesan">Pesan:</label>
+          <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          <input type="button" value="Kirim" onclick="kirimData()" />
+        </form>
+        <p id="statusPesan"></p>
+      </div>
+ 
+
+    <footer>           
+
+        <div class="footer-content">
+            <p>&copy; 2024 MathTricks = Matrix Determinant Calculator</p>
+        </div>
+     
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  
+</body>
+</html>
